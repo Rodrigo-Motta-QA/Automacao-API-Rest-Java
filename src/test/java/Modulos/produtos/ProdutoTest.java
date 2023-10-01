@@ -36,9 +36,7 @@ public class ProdutoTest {
     @DisplayName("Validar os limites proibidos do produto menor que 0.01.")
     public void testValidarLImitesZeradoProibidoValorProduto() {
 
-
         // tentar inserir um produtocom o valor 0.00 e validar que a mensagem de erro foi apresentada e
-        // o status code retornado foi 422
 
         given()
                 .contentType(ContentType.JSON)
@@ -57,7 +55,7 @@ public class ProdutoTest {
     public void testValidarValorAcimaSeteMilProibidoValorProduto() {
 
         // tentar inserir um produtocom o valor 7000.01 e validar que a mensagem de erro foi apresentada e
-        // o status code retornado foi 422
+
         given()
                 .contentType(ContentType.JSON)
                 .header("token", this.token)
